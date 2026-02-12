@@ -1,8 +1,6 @@
 package com.dlz.test.spring.springframework.iproxy;
 
-import com.dlz.spring.holder.SpringHolder;
 import com.dlz.test.spring.config.BaseTest;
-import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
