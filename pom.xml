@@ -2,30 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>top.dlzio</groupId>
+    <parent>
+        <groupId>top.dlzio</groupId>
+        <artifactId>dlz.parent</artifactId>
+        <version>6.6.0-SNAPSHOT</version>
+    </parent>
     <artifactId>dlz.spring</artifactId>
     <version>6.6.0-SNAPSHOT</version>
     <name>dlz.spring</name>
     <packaging>jar</packaging>
-    <properties>
-        <java.version>1.8</java.version>
-        <dlz.dependencies.version>2.6.12</dlz.dependencies.version>
-        <dlz.comm.version>6.5.1</dlz.comm.version>
-        <dlz.spring.version>6.6.0-SNAPSHOT</dlz.spring.version>
-        <dlz.db.version>6.6.0-SNAPSHOT</dlz.db.version>
-    </properties>
-    <dependencyManagement>
-        <dependencies>
-            <!-- Spring Boot 依赖 -->
-            <dependency>
-                <groupId>top.dlzio</groupId>
-                <artifactId>dlz.dependencies</artifactId>
-                <version>${dlz.dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>top.dlzio</groupId>
@@ -36,12 +21,6 @@
             <groupId>org.dom4j</groupId>
             <artifactId>dom4j</artifactId>
             <version>2.1.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <!-- http -->
@@ -94,35 +73,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <!-- 打包时跳过测试 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>UTF-8</encoding>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
