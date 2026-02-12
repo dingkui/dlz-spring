@@ -1,7 +1,5 @@
 package com.dlz.spring.redis.queue.annotation;
 
-import org.springframework.stereotype.Component;
-
 import java.lang.annotation.*;
 
 /**

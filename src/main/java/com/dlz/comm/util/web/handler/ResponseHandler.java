@@ -1,10 +1,10 @@
 package com.dlz.comm.util.web.handler;
 
 
-import com.dlz.comm.exception.SystemException;
-import com.dlz.comm.util.ValUtil;
 import com.dlz.comm.exception.BussinessException;
 import com.dlz.comm.exception.HttpException;
+import com.dlz.comm.exception.SystemException;
+import com.dlz.comm.util.ValUtil;
 import com.dlz.comm.util.web.HttpRequestParam;
 import com.dlz.comm.util.web.reader.IResponseReader;
 import com.dlz.comm.util.web.reader.ResponseStringReader;

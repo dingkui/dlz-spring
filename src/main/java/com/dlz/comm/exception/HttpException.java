@@ -1,8 +1,5 @@
 package com.dlz.comm.exception;
 
-import com.dlz.comm.exception.BaseException;
-import com.dlz.comm.exception.ExceptionErrors;
-
 /**
  * HttpException for SDK
  */
