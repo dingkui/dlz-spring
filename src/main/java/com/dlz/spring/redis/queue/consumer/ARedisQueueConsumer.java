@@ -7,11 +7,11 @@ import com.dlz.comm.util.encry.TraceUtil;
 import com.dlz.spring.redis.queue.annotation.AnnoRedisQueueConsumer;
 import com.dlz.spring.redis.util.IKeyMaker;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-import javax.annotation.PostConstruct;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.concurrent.Executors;
  * 消费者需要注解 AnnoRedisQueueConsumer 消费者队列的名称
  */
 @Slf4j
-public abstract class ARedisQueueConsumer<T> {
+public abstract class ARedisQueueConsumer<T> implements InitializingBean {
     /**
      * 消费者处理逻辑
      *
@@ -39,8 +39,8 @@ public abstract class ARedisQueueConsumer<T> {
     private Class<T> finalClassType = null;
     private String redisQueueName = null;
 
-    @PostConstruct
-    private void init() {
+    @Override
+    public void afterPropertiesSet() throws Exception{
         AnnoRedisQueueConsumer annotation = this.getClass().getAnnotation(AnnoRedisQueueConsumer.class);
         if (annotation == null) {
             throw new SystemException(this.getClass().getName() + "必须注解 AnnoRedisQueueConsumer");
