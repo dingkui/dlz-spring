@@ -18,6 +18,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.core.env.Environment;
 import redis.clients.jedis.JedisPool;
@@ -27,16 +28,17 @@ import redis.clients.jedis.JedisPool;
  * date 2020-10-15
  */
 @Slf4j
+@Configuration
 @EnableConfigurationProperties({DlzProperties.class})
 public class DlzFwConfig {
     /**
      * spring 容器启动开始执行
      */
     @Bean
-    public BeanFactoryPostProcessor myBeanFactory(Environment env) {
+    public BeanFactoryPostProcessor myBeanFactory(DlzProperties properties) {
         return beanFactory -> {
             SpringHolder.init(beanFactory);
-            String apiScanPath = env.getProperty("dlz.fw.api-scan-path");
+            String apiScanPath = properties.getFw().getApiScanPath();
             if (StringUtils.isNotEmpty(apiScanPath)) {
                 if(log.isInfoEnabled()) {
                     log.info("dlz spring apiScan init,resoucePath:{}", apiScanPath);

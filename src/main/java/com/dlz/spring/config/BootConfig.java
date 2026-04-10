@@ -2,14 +2,14 @@ package com.dlz.spring.config;
 
 
 import com.dlz.comm.json.IUniversalVals;
-import com.dlz.comm.json.JSONList;
 import com.dlz.comm.json.JSONMap;
-import com.dlz.comm.util.JacksonUtil;
 import com.dlz.comm.util.StringUtils;
 import com.dlz.comm.util.config.ConfUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.util.Assert;
 
+import java.util.Objects;
 import java.util.function.Function;
 
 /**
@@ -23,17 +23,37 @@ public class BootConfig implements IUniversalVals {
      */
     @Autowired
     Environment environment;
-
     /**
      * spring boot 和 config 配置本地缓存
      */
-    private JSONMap map = new JSONMap();
-
+    private final JSONMap map = new JSONMap();
     /**
      * 客户端自定义取得配置的服务
      */
     @Autowired
     ICustomConfig customConfig;
+
+    /**
+     * 环境，方便在代码中获取
+     *
+     * @return 环境 env
+     */
+    public String getEnv() {
+        Objects.requireNonNull(environment, "Spring boot 环境下 Environment 不可能为null");
+        String env = environment.getProperty("spring.profiles.active");
+        Assert.notNull(env, "请使用 DlzApplication 启动...");
+        return env;
+    }
+
+    /**
+     * 应用名称${spring.application.name}
+     *
+     * @return 应用名
+     */
+    public String getName() {
+        Objects.requireNonNull(environment, "Spring boot 环境下 Environment 不可能为null");
+        return environment.getProperty("spring.application.name", "dlz");
+    }
 
     @Override
     public Object getInfoObject() {
@@ -45,27 +65,13 @@ public class BootConfig implements IUniversalVals {
         if (val != null) {
             return val;
         }
-
-        String valStr = environment.getProperty(name);
-        if (valStr == null) {
-            valStr = ConfUtil.getConfig(name);
+        val = environment.getProperty(name);
+        if (val == null) {
+            val = ConfUtil.getConfig(name);
         }
-        if (valStr != null) {
-            if (JacksonUtil.isJsonObj(valStr)) {
-                val = new JSONMap(valStr);
-            } else if (JacksonUtil.isJsonArray(valStr)) {
-                val = new JSONList(valStr);
-            } else {
-                val = valStr;
-            }
-            map.put(name, val);
-            return val;
-        }
-
         if (val == null) {
             return customConfig.get(name);
         }
-
         return val;
     };
 
@@ -73,4 +79,5 @@ public class BootConfig implements IUniversalVals {
     public Object getKeyVal(String key) {
         return StringUtils.getReplaceStr(key, getStrFn, 0);
     }
+
 }
