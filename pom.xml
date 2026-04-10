@@ -5,10 +5,10 @@
     <parent>
         <groupId>top.dlzio</groupId>
         <artifactId>dlz.parent</artifactId>
-        <version>6.6.1</version>
+        <version>6.6.2</version>
     </parent>
     <artifactId>dlz.spring</artifactId>
-    <version>6.6.1-SNAPSHOT</version>
+    <version>6.6.2-SNAPSHOT</version>
     <name>dlz.spring</name>
     <packaging>jar</packaging>
     <dependencies>
