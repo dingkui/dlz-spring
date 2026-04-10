@@ -2,7 +2,7 @@ package com.dlz.spring.holder;
 
 import com.dlz.comm.exception.SystemException;
 import com.dlz.comm.util.StringUtils;
-import com.dlz.comm.util.encry.TraceUtil;
+import com.dlz.comm.util.encry.UuidUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -141,7 +141,7 @@ public class SpringHolder {
             }
         } else {
             while (beanFactory.containsBean(toRegeistBeanId)) {
-                toRegeistBeanId = beanId + "_" + TraceUtil.generateShortUuid();
+                toRegeistBeanId = beanId + "_" + UuidUtil.shortUuid();
             }
         }
 //    	ConfigurableApplicationContext configurableContext = (ConfigurableApplicationContext) application;
