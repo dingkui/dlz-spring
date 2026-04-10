@@ -3,7 +3,7 @@ package com.dlz.spring.redis.queue.consumer;
 import com.dlz.comm.exception.SystemException;
 import com.dlz.comm.util.ExceptionUtils;
 import com.dlz.comm.util.ValUtil;
-import com.dlz.comm.util.encry.TraceUtil;
+import com.dlz.comm.util.id.TraceUtil;
 import com.dlz.spring.redis.queue.annotation.AnnoRedisQueueConsumer;
 import com.dlz.spring.redis.util.IKeyMaker;
 import lombok.extern.slf4j.Slf4j;
