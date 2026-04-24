@@ -28,7 +28,6 @@ import redis.clients.jedis.JedisPool;
  * date 2020-10-15
  */
 @Slf4j
-@Configuration
 @EnableConfigurationProperties({DlzProperties.class})
 public class DlzFwConfig {
     /**
