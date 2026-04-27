@@ -5,7 +5,7 @@
     <parent>
         <groupId>top.dlzio</groupId>
         <artifactId>dlz.parent</artifactId>
-        <version>6.6.3</version>
+        <version>6.6.3.1</version>
     </parent>
     <artifactId>dlz.spring</artifactId>
     <version>6.6.3</version>
@@ -77,4 +77,22 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/dingkui/dlz.spring</url>
+        <connection>scm:git:https://github.com/dingkui/dlz.spring.git</connection>
+        <developerConnection>scm:git:https://github.com/dingkui/dlz.spring.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <id>dk1983</id>
+            <name>dingkui</name>
+            <email>59461202@qq.com</email>
+        </developer>
+    </developers>
 </project>
