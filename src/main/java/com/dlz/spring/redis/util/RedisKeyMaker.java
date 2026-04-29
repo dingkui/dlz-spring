@@ -1,6 +1,6 @@
 package com.dlz.spring.redis.util;
 
-import com.dlz.comm.util.ValUtil;
+import com.dlz.kit.util.ValUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

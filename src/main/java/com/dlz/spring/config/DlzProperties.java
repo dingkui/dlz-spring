@@ -1,7 +1,7 @@
 package com.dlz.spring.config;
 
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.cache.MemoryCache;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.cache.MemoryCache;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

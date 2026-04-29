@@ -1,6 +1,6 @@
 package com.dlz.spring.cache.aspect;
 
-import com.dlz.comm.json.JSONMap;
+import com.dlz.kit.json.JSONMap;
 
 import java.lang.reflect.Method;
 

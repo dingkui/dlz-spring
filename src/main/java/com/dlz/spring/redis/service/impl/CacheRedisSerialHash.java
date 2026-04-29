@@ -1,7 +1,7 @@
 package com.dlz.spring.redis.service.impl;
 
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.util.ValUtil;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.util.ValUtil;
 import com.dlz.spring.redis.excutor.JedisExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 

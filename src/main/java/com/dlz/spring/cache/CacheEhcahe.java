@@ -1,8 +1,8 @@
 package com.dlz.spring.cache;
 
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.util.JacksonUtil;
-import com.dlz.comm.util.ValUtil;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.util.JacksonUtil;
+import com.dlz.kit.util.ValUtil;
 import com.dlz.spring.holder.SpringHolder;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.ehcache.Cache;

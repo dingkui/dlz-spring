@@ -1,8 +1,8 @@
 package com.dlz.spring.redis.queue.provider;
 
-import com.dlz.comm.exception.SystemException;
-import com.dlz.comm.util.ExceptionUtils;
-import com.dlz.comm.util.ValUtil;
+import com.dlz.kit.exception.SystemException;
+import com.dlz.kit.util.ExceptionUtils;
+import com.dlz.kit.util.ValUtil;
 import com.dlz.spring.redis.excutor.JedisExecutor;
 import com.dlz.spring.redis.queue.annotation.AnnoRedisQueueProvider;
 import com.dlz.spring.redis.util.IKeyMaker;

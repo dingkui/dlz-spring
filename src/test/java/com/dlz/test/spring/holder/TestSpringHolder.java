@@ -1,6 +1,6 @@
 package com.dlz.test.spring.holder;
 
-import com.dlz.comm.util.id.TraceUtil;
+import com.dlz.kit.util.id.TraceUtil;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.test.spring.config.BaseTest;
 import lombok.extern.slf4j.Slf4j;

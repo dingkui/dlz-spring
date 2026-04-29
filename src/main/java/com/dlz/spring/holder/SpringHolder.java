@@ -1,8 +1,8 @@
 package com.dlz.spring.holder;
 
-import com.dlz.comm.exception.SystemException;
-import com.dlz.comm.util.StringUtils;
-import com.dlz.comm.util.id.UuidUtil;
+import com.dlz.kit.exception.SystemException;
+import com.dlz.kit.util.StringUtils;
+import com.dlz.kit.util.id.UuidUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -7,20 +7,20 @@
         <artifactId>dlz.parent</artifactId>
         <version>6.6.3.1</version>
     </parent>
-    <artifactId>dlz.spring</artifactId>
-    <version>6.6.3</version>
-    <name>dlz.spring</name>
+    <artifactId>dlz-spring</artifactId>
+    <version>6.6.4</version>
+    <name>dlz-spring</name>
     <packaging>jar</packaging>
     <description>一个让 Spring 开发更简单、更高效的工具集,代码量减少</description>
     <properties>
         <java.version>1.8</java.version>
-        <dlz.comm.version>6.6.3</dlz.comm.version>
+        <dlz-kit.version>6.6.4</dlz-kit.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>top.dlzio</groupId>
-            <artifactId>dlz.comm</artifactId>
-            <version>${dlz.comm.version}</version>
+            <artifactId>dlz-kit</artifactId>
+            <version>${dlz-kit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.dom4j</groupId>
@@ -85,9 +85,9 @@
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/dingkui/dlz.spring</url>
-        <connection>scm:git:https://github.com/dingkui/dlz.spring.git</connection>
-        <developerConnection>scm:git:https://github.com/dingkui/dlz.spring.git</developerConnection>
+        <url>https://github.com/dingkui/dlz-spring</url>
+        <connection>scm:git:https://github.com/dingkui/dlz-spring.git</connection>
+        <developerConnection>scm:git:https://github.com/dingkui/dlz-spring.git</developerConnection>
     </scm>
     <developers>
         <developer>

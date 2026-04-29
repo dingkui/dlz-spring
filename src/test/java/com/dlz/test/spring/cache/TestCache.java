@@ -1,11 +1,11 @@
 package com.dlz.test.spring.cache;
 
-import com.dlz.comm.cache.CacheHolder;
-import com.dlz.comm.cache.CacheUtil;
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.json.JSONMap;
-import com.dlz.comm.util.ValUtil;
-import com.dlz.comm.util.id.TraceUtil;
+import com.dlz.kit.cache.CacheHolder;
+import com.dlz.kit.cache.CacheUtil;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.json.JSONMap;
+import com.dlz.kit.util.ValUtil;
+import com.dlz.kit.util.id.TraceUtil;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.spring.redis.service.impl.CacheRedisJsonHash;
 import com.dlz.spring.redis.service.impl.CacheRedisJsonKey;

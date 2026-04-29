@@ -9,7 +9,7 @@
 ## 核心模块
 
 ```
-dlz.spring/
+dlz-spring/
 ├── HttpUtil          # HTTP 客户端（核心）
 ├── Redis             # Redis 操作工具
 ├── Cache             # 缓存管理

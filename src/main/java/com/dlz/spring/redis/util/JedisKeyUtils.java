@@ -1,8 +1,8 @@
 package com.dlz.spring.redis.util;
 
-import com.dlz.comm.exception.SystemException;
-import com.dlz.comm.util.JacksonUtil;
-import com.dlz.comm.util.ValUtil;
+import com.dlz.kit.exception.SystemException;
+import com.dlz.kit.util.JacksonUtil;
+import com.dlz.kit.util.ValUtil;
 import com.fasterxml.jackson.databind.JavaType;
 
 import java.io.Serializable;

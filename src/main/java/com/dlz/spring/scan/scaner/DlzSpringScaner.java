@@ -1,6 +1,6 @@
 package com.dlz.spring.scan.scaner;
 
-import com.dlz.comm.util.ExceptionUtils;
+import com.dlz.kit.util.ExceptionUtils;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.spring.scan.scaner.IScaner.IScanerProcessor;
 import lombok.extern.slf4j.Slf4j;

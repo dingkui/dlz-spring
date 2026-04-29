@@ -1,6 +1,6 @@
 package com.dlz.test.spring.cache;
 
-import com.dlz.comm.json.JSONMap;
+import com.dlz.kit.json.JSONMap;
 import com.dlz.spring.cache.aspect.ICacheKeyIf;
 
 import java.lang.reflect.Method;

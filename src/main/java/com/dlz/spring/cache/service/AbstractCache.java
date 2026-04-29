@@ -1,10 +1,10 @@
 package com.dlz.spring.cache.service;
 
-import com.dlz.comm.cache.CacheHolder;
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.util.ExceptionUtils;
-import com.dlz.comm.util.StringUtils;
-import com.dlz.comm.util.system.Reflections;
+import com.dlz.kit.cache.CacheHolder;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.util.ExceptionUtils;
+import com.dlz.kit.util.StringUtils;
+import com.dlz.kit.util.system.Reflections;
 import com.dlz.spring.holder.SpringHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.DependsOn;

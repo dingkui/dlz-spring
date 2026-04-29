@@ -1,0 +1,16 @@
+package com.dlz.kit.exception;
+
+/**
+ * 认证异常
+ */
+public class CredentialsException extends BaseException {
+    private static final long serialVersionUID = 4454410583070023L;
+
+    private static int DEFUALT_ERROR_CODE = 2001;
+    static {
+        ExceptionErrors.addErrors(2001, "非法访问异常");
+    }
+    public CredentialsException(String message) {
+        super(DEFUALT_ERROR_CODE, message, null);
+    }
+}

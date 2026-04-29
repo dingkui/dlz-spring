@@ -1,6 +1,6 @@
 package com.dlz.spring.scan.iproxy;
 
-import com.dlz.comm.util.StringUtils;
+import com.dlz.kit.util.StringUtils;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.spring.scan.iproxy.anno.AnnoApi;
 import com.dlz.spring.scan.scaner.IScaner;

@@ -1,6 +1,6 @@
 package com.dlz.spring.scan.iproxy;
 
-import com.dlz.comm.json.JSONMap;
+import com.dlz.kit.json.JSONMap;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;

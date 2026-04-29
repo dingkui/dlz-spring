@@ -1,10 +1,10 @@
 package com.dlz.spring.config;
 
 
-import com.dlz.comm.json.IUniversalVals;
-import com.dlz.comm.json.JSONMap;
-import com.dlz.comm.util.StringUtils;
-import com.dlz.comm.util.config.ConfUtil;
+import com.dlz.kit.json.IUniversalVals;
+import com.dlz.kit.json.JSONMap;
+import com.dlz.kit.util.StringUtils;
+import com.dlz.kit.util.config.ConfUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.util.Assert;

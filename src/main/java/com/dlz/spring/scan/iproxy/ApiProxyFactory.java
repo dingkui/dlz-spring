@@ -1,6 +1,6 @@
 package com.dlz.spring.scan.iproxy;
 
-import com.dlz.comm.exception.SystemException;
+import com.dlz.kit.exception.SystemException;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.spring.scan.iproxy.anno.AnnoApi;
 import org.springframework.beans.factory.FactoryBean;

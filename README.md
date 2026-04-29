@@ -1,8 +1,8 @@
-# DLZ.Spring - Spring 增强工具集
+# DLZ-Spring - Dlz-kit Spring 增强工具集
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/Version-6.6.1--SNAPSHOT-orange.svg)](https://github.com/yourusername/dlz.spring)
+[![Version](https://img.shields.io/badge/Version-6.6.1--SNAPSHOT-orange.svg)](https://github.com/dingkui/dlz-spring)
 [![JDK](https://img.shields.io/badge/JDK-8+-green.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
 
@@ -397,8 +397,8 @@ User user = HttpEnum.GET.send(param);  // 直接返回 User 对象
 ```xml
 <dependency>
     <groupId>top.dlzio</groupId>
-    <artifactId>dlz.spring</artifactId>
-    <version>6.6.2-SNAPSHOT</version>
+    <artifactId>dlz-spring</artifactId>
+    <version>6.6.4</version>
 </dependency>
 ```
 

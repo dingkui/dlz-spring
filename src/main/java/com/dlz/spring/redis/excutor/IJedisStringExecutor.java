@@ -1,8 +1,8 @@
 package com.dlz.spring.redis.excutor;
 
-import com.dlz.comm.util.JacksonUtil;
-import com.dlz.comm.util.ValUtil;
-import com.dlz.comm.util.system.SerializeUtil;
+import com.dlz.kit.util.JacksonUtil;
+import com.dlz.kit.util.ValUtil;
+import com.dlz.kit.util.system.SerializeUtil;
 import com.dlz.spring.redis.util.JedisKeyUtils;
 import com.fasterxml.jackson.databind.JavaType;
 import redis.clients.jedis.util.SafeEncoder;

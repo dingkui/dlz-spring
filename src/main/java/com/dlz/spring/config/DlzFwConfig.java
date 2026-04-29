@@ -1,8 +1,8 @@
 package com.dlz.spring.config;
 
-import com.dlz.comm.cache.CacheUtil;
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.util.StringUtils;
+import com.dlz.kit.cache.CacheUtil;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.util.StringUtils;
 import com.dlz.spring.cache.aspect.CacheAspect;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.spring.redis.excutor.JedisExecutor;

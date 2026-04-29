@@ -1,10 +1,10 @@
 package com.dlz.spring.cache.aspect;
 
-import com.dlz.comm.cache.ICache;
-import com.dlz.comm.exception.SystemException;
-import com.dlz.comm.json.JSONMap;
-import com.dlz.comm.util.StringUtils;
-import com.dlz.comm.util.ValUtil;
+import com.dlz.kit.cache.ICache;
+import com.dlz.kit.exception.SystemException;
+import com.dlz.kit.json.JSONMap;
+import com.dlz.kit.util.StringUtils;
+import com.dlz.kit.util.ValUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
