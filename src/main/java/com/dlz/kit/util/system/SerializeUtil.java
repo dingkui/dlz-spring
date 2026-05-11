@@ -1,5 +1,7 @@
 package com.dlz.kit.util.system;
 
+import com.dlz.kit.exception.SystemException;
+
 import java.io.*;
 
 /**
@@ -32,7 +34,7 @@ public class SerializeUtil {
             bos.close();
             rv = bos.toByteArray();
         } catch (IOException e) {
-            throw new IllegalArgumentException("Non-serializable object", e);
+            throw new SystemException("Non-serializable object", e);
         } finally {
             try {
                 if (os != null)

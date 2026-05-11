@@ -1,6 +1,6 @@
 # DLZ-Spring - Dlz-kit Spring 增强工具集
 
-<div align="center">
+<div>
 
 [![Version](https://img.shields.io/badge/Version-6.6.1--SNAPSHOT-orange.svg)](https://github.com/dingkui/dlz-spring)
 [![JDK](https://img.shields.io/badge/JDK-8+-green.svg)](https://www.oracle.com/java/)
@@ -901,7 +901,7 @@ public class MenuService {
 
 ---
 
-<div align="center">
+<div>
 
 **简洁 | 易用 | 高效**
 

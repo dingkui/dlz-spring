@@ -1184,7 +1184,7 @@ param.setRequestConfig(config);
 
 ---
 
-<div align="center">
+<div>
 
 **简洁 | 易用 | 高效**
 

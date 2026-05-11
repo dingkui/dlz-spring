@@ -2,25 +2,18 @@ package com.dlz.spring.config;
 
 import com.dlz.kit.cache.CacheUtil;
 import com.dlz.kit.cache.ICache;
-import com.dlz.kit.util.StringUtils;
 import com.dlz.spring.cache.aspect.CacheAspect;
 import com.dlz.spring.holder.SpringHolder;
 import com.dlz.spring.redis.excutor.JedisExecutor;
-import com.dlz.spring.redis.queue.provider.RedisQueueProviderApiHandler;
 import com.dlz.spring.redis.util.IKeyMaker;
 import com.dlz.spring.redis.util.RedisKeyMaker;
-import com.dlz.spring.scan.iproxy.ApiProxyHandler;
-import com.dlz.spring.scan.iproxy.ApiScaner;
-import com.dlz.spring.scan.scaner.DlzSpringScaner;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.core.env.Environment;
 import redis.clients.jedis.JedisPool;
 
 /**
@@ -34,16 +27,9 @@ public class DlzFwConfig {
      * spring 容器启动开始执行
      */
     @Bean
-    public BeanFactoryPostProcessor myBeanFactory(DlzProperties properties) {
+    public BeanFactoryPostProcessor myBeanFactory() {
         return beanFactory -> {
             SpringHolder.init(beanFactory);
-            String apiScanPath = properties.getFw().getApiScanPath();
-            if (StringUtils.isNotEmpty(apiScanPath)) {
-                if(log.isInfoEnabled()) {
-                    log.info("dlz spring apiScan init,resoucePath:{}", apiScanPath);
-                }
-                new DlzSpringScaner().doComponents(new ApiScaner(apiScanPath));
-            }
         };
     }
 
@@ -100,19 +86,6 @@ public class DlzFwConfig {
             log.info("init cacheAspect：dlz.cache.anno=true");
         }
         return new CacheAspect(cache);
-    }
-
-    /**
-     * redis生产者消费者模式,开启本功能依赖开启dlz.fw.api-scan-path路径扫描
-     */
-    @Bean(name = "redisQueueProviderApiHandler")
-    @Lazy
-    @ConditionalOnMissingBean(name = "redisQueueProviderApiHandler")
-    public ApiProxyHandler redisQueueProviderApiHandler() {
-        if(log.isInfoEnabled()){
-            log.info("init redisQueueProviderApiHandler:"+RedisQueueProviderApiHandler.class.getName());
-        }
-        return new RedisQueueProviderApiHandler();
     }
 
     @Bean(name = "jedisExecutor")

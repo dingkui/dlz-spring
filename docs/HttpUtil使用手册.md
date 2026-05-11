@@ -681,7 +681,7 @@ log.info("响应结果：{}", result);
 
 ---
 
-<div align="center">
+<div>
 
 **简洁 | 易用 | 高效**
 
