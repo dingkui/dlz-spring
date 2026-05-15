@@ -5,7 +5,6 @@ import com.dlz.kit.util.ExceptionUtils;
 import com.dlz.spring.redis.util.IKeyMaker;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -21,9 +20,7 @@ import java.util.function.Function;
 @Slf4j
 @AllArgsConstructor
 public class JedisExecutor implements IJedisKeyExecutor, IJedisStringExecutor, IJedisHashExecutor, IJedisListExecutor, IJedisSetExecutor {
-    @Autowired
     private final JedisPool jedisPool;
-    @Autowired
     private final IKeyMaker keyMaker;
 
     /**
